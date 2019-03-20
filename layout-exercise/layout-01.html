@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <style>
+      body {
+        display: grid;
+        grid-template-areas:
+          "pic banner"
+          "nav content";
+        grid-template-rows: 300px 1fr;
+        grid-template-columns: 300px 1fr;
+        grid-gap: 32px;
+        min-height: 100vh;
+        padding: 32px;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 16px;
+        overflow: auto;
+      }
+      div,
+      nav {
+        background: grey;
+      }
+      nav {
+        grid-area: "nav";
+        height: max-content;
+      }
+      nav ul {
+        margin: 0;
+        padding: 0;
+      }
+      nav li {
+        background: lightgray;
+        list-style: none;
+        display: block;
+        margin: 16px;
+        padding: 16px;
+      }
+      #banner {
+        grid-area: banner;
+        border-radius: -50%;
+        clip-path: polygon(100% 0, 100% 100%, 0% 100%, 64px 50%, 0% 0%);
+        margin-left: -16px;
+      }
+      #profile-pic {
+        border-radius: 50%;
+      }
+      main {
+        display: grid;
+        grid-gap: 32px;
+        grid-template-columns: 1fr 1fr;
+      }
+      .card {
+        min-height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="profile-pic"></div>
+    <div id="banner"></div>
+    <nav id="main-nav">
+      <ul>
+        <li>x</li>
+        <li>x</li>
+        <li>x</li>
+        <li>x</li>
+      </ul>
+    </nav>
+    <main>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </main>
+  </body>
+</html>
